@@ -1,10 +1,12 @@
 import React from "react";
-import cookiesData from "../cookies";
+import ProductsList from "./ProductsList";
 
-export default function Product(props) {
-    let info = cookiesData.map(x => x)
-	return <div>
-        {info}
-    
-    </div>;
+export default function Product({ product }) {
+	return (
+		<div>
+			<h2>{product.name}</h2>
+			<p>{product.price}</p>
+			<img>{product.image}</img>
+		</div>
+	);
 }
